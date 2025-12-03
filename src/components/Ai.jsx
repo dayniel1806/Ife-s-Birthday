@@ -1,4 +1,3 @@
-import { Analytics } from "@vercel/analytics/next"
 import { useEffect, useState } from "react";
 import Aibaby from "../images/AiBaby-removebg.png";
 import "./Ai.css";
@@ -249,7 +248,7 @@ function App() {
           <img src={Aibaby} alt="us" className="photo" />
         </section>
 
-        <section className="bg5 page1">
+        {/* <section className="bg5 page1">
           <MagazinePage />
         </section>
 
@@ -324,9 +323,8 @@ function App() {
           <p style={{ fontSize: "1.5rem", color: "white" }}>
             Scroll up to relive it anytime
           </p>
-        </section>
+        </section> */}
       </div>
-      <Analytics />
     </>
   );
 }
