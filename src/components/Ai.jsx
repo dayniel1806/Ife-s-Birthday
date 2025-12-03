@@ -112,7 +112,7 @@ function App() {
 
       // FIXED target with Nigeria timezone
       let target = new Date(
-        new Date("2025-12-05T00:00:00").toLocaleString("en-US", {
+        new Date("2025-12-06T00:00:00").toLocaleString("en-US", {
           timeZone: "Africa/Lagos",
         })
       );
@@ -134,7 +134,7 @@ function App() {
       const d = totalDays >= 365 ? totalDays % 365 : totalDays;
 
       setYears(y);
-      setDays(d);
+      // setDays(d);
       setHours(h);
       setMinutes(m);
       setSeconds(s);
