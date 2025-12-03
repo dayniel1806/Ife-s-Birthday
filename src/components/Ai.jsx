@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/next"
-  
+import { useEffect, useState } from "react";
 import Aibaby from "../images/AiBaby-removebg.png";
 import "./Ai.css";
 import MagazinePage from "./MagazinePage";
@@ -327,6 +326,7 @@ function App() {
           </p>
         </section>
       </div>
+      <Analytics />
     </>
   );
 }
