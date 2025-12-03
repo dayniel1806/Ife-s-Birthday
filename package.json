@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "postinstall": "node scripts/setup-analytics-stub.js"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
