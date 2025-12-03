@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Dancing+Script:wght@700&display=swap");
+
+.page1 {
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+.page2 {
+  min-height: 300vh;
+  padding: 100px 20px 150px;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+.collage-area {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.pphoto {
+  position: absolute;
+  border: 10px solid white;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+.photo1 {
+  top: 1%;
+  left: -25%;
+  width: 25%;
+  transform: rotate(-12deg);
+}
+.photo2 {
+  top:5%;
+  right: -28%;
+  width: 26%;
+  transform: rotate(12deg);
+}
+.photo3 {
+  bottom: 62%;
+  left: -28%;
+  width: 30%;
+  transform: rotate(-1deg);
+}
+.photo4 {
+  bottom: 55%;
+  right: -25%;
+  width: 30%;
+  transform: rotate(8deg);
+}
+
+.photo5 {
+  bottom: 5%;
+  left: -25%;
+  width: 35%;
+  transform: rotate(-18deg);
+}
+
+.photo6{
+  bottom: 2%;
+  right: -25%;
+  width: 35%;
+  transform: rotate(8deg);
+}
+
+
+.photo7{
+  bottom: 35%;
+  left: -25%;
+  width: 35%;
+  transform: rotate(8deg);
+}
+
+
+.photo8{
+  bottom: 25%;
+  right: -25%;
+  width: 35%;
+  transform: rotate(8deg);
+}
+
+
+
+.sticky {
+  position: absolute;
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-family: "Kalam", cursive;
+  font-size: 2.2rem;
+  color: #d63384;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: rotate(6deg);
+}
+.sticky1 {
+  top: 12%;
+  right: -26%;
+  background: #a8e6cf;
+}
+.sticky2 {
+  bottom: 52%;
+  left: -25%;
+  background: #ffd93d;
+}
+
+.list-title {
+  font-family: "Kalam", cursive;
+  font-size: 3.5rem;
+  color: #d63384;
+  text-align: center;
+  margin: 80px 0 50px;
+}
+.love-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.love-item {
+  background: rgba(255, 255, 255, 0.95);
+  margin: 25px 0;
+  padding: 25px 35px;
+  border-radius: 25px;
+  font-family: "Kalam", cursive;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-left: 8px solid #ff6b6b;
+}
+
+
+.list-title {
+  font-family: "Kalam", cursive;
+  font-size: 3.5rem;
+  color: #d63384;
+  text-align: center;
+  margin: 80px 0 50px;
+}
+.love-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.love-item {
+  background: rgba(255, 255, 255, 0.95);
+  margin: 25px 0;
+  padding: 25px 35px;
+  border-radius: 25px;
+  font-family: "Kalam", cursive;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-left: 8px solid #ff6b6b;
+}

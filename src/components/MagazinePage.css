@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+.mag-page {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+.editor-note {
+  background: #6db2ff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 60%;
+}
+.editor-note h2 {
+  margin-top: 0;
+}
+.top-right-photo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: center;
+}
+.top-right-photo img {
+  width: 200px;
+  border-radius: 10px;
+}
+.tag {
+  display: inline-block;
+  background: #8fe3b3;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+.photo-grid {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+.photo-frame {
+  padding: 5px;
+  border-radius: 6px;
+}
+.photo-frame img {
+  width: 240px;
+  border-radius: 6px;
+}
+/* .yellow {
+background: #ffcc33;
+} */
+.teal {
+  background: #3ad0c0;
+}
+.message-box {
+  background: #e83f57;
+  color: white;
+  padding: 20px;
+  margin-top: 25px;
+  border-radius: 10px;
+}
+.bottom-banner {
+  background: #f7a41b;
+  padding: 15px;
+  margin-top: 30px;
+  text-align: center;
+  border-radius: 20px;
+  font-weight: bold;
+}

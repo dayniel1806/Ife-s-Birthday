@@ -1,0 +1,124 @@
+/* Reset & full viewport */
+
+.birthday-fullscreen {
+  position: relative;
+  width: 100vw;
+  height: 150vh;
+  background: linear-gradient(135deg, #ffeef8, #e6d9ff);
+  overflow: hidden;
+  font-family: "Arial Black", "Helvetica", sans-serif;
+}
+
+.ppphoto {
+  position: absolute;
+  object-fit: cover;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  border: 14px solid white;
+  transition: transform 0.4s ease;
+}
+
+
+.photo-one {
+  top: 0%;
+  left: 3%;
+  width: 48%;
+  height: 75%;
+  height: 100%;
+  border-radius: 20px;
+  transform: rotate(6deg);
+  z-index: 2;
+  /* opacity: 0.8; */
+}
+
+.photo-two {
+  top: 8%;
+  right: 1%;
+  width: 50%;
+  height: 68%;
+  border-radius: 20px;
+  transform: rotate(8deg);
+  z-index: 3;
+  border: 16px solid white;
+  /* opacity: 0.7; */
+
+}
+
+.photo-three {
+  bottom: 1%;
+  right: 12%;
+  width: 52%;
+  height: 65%;
+  border-radius: 20px;
+  transform: rotate(-4deg);
+  border: 18px solid white;
+  z-index: 4;
+  /* opacity: 0.8; */
+}
+
+.photo-four {
+  /* bottom: 1%;
+  right: 12%;
+  width: 52%;
+  height: 65%; */
+  border-radius: 20px;
+  transform: rotate(-4deg);
+  border: 18px solid white;
+  z-index: 2;
+  /* opacity: 0.8; */
+}
+
+/* HUGE LOVE text */
+.love-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32vw; /* responsive huge text */
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.93);
+  letter-spacing: 10px;
+  text-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  z-index: 5;
+  user-select: none;
+}
+
+/* Floating decorative blobs */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.blob-1 {
+  width: 600px;
+  height: 600px;
+  background: #ff99cc;
+  top: -200px;
+  right: -200px;
+}
+
+.blob-2 {
+  width: 800px;
+  height: 800px;
+  background: #d8b4ff;
+  bottom: -300px;
+  left: -300px;
+}
+
+.blob-3 {
+  width: 500px;
+  height: 500px;
+  background: #ffb3d1;
+  top: 40%;
+  right: -100px;
+  opacity: 0.4;
+}
+
+.ppphoto:hover {
+  transform: rotate(0deg) scale(1.03) !important;
+  z-index: 20 !important;
+  opacity: 1;
+}

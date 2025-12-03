@@ -1,0 +1,45 @@
+/* ThingsSheLikes.css */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+.likes-container {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+  background: #f3f0ec;
+  border-radius: 12px;
+  font-family: \"Georgia\", serif;
+}
+
+.likes-title {
+  text-align: center;
+  font-size: 4.2rem;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #3b2b2b;
+  font-family: 'Great Vibes', cursive;
+}
+
+.likes-title span {
+  font-size: 1.6rem;
+  font-weight: 400;
+  display: block;
+  margin-top: -10px;
+}
+
+.likes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.like-item {
+  background: #8c1f1f;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 40px;
+  font-size: 1.7rem;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.5px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
