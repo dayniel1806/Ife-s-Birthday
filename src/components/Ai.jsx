@@ -11,8 +11,10 @@ const HER_NAME = "Baby"; // ← her name/nickname
 const YOUR_NAME = "Your Ife"; // ← your name
 const BIRTHDAY_DATE = "2025-12-05"; // ← YYYY-MM-DD
 const TOGETHER_SINCE = "June 2023";
+// const COUPLE_SONG =
+//   "https://www.youtube.com/embed/RgKAFK5djSk?autoplay=1&loop=1&playlist=RgKAFK5djSk&mute=0&volume=20";
 const COUPLE_SONG =
-  "https://www.youtube.com/embed/RgKAFK5djSk?autoplay=1&loop=1&playlist=RgKAFK5djSk&mute=0&volume=20";
+  "https://www.youtube.com/embed/mvHNk1IBCv4?autoplay=1&loop=1&playlist=mvHNk1IBCv4&controls=0&modestbranding=1&rel=0&mute=0&start=0";
 // "../images/forever_Sweet.mp3";
 
 import tiny from "../images/tiny.jpg";
