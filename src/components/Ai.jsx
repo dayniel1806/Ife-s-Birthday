@@ -4,19 +4,17 @@ import "./Ai.css";
 import MagazinePage from "./MagazinePage";
 import "./page2.css";
 
-{
-  /* ========== EDIT THESE 8 LINES ONLY ========== */
-}
 const HER_NAME = "Baby"; // ← her name/nickname
-const YOUR_NAME = "Your Ife"; // ← your name
-const BIRTHDAY_DATE = "2025-12-05"; // ← YYYY-MM-DD
+const YOUR_NAME = "Your Ife";
+const BIRTHDAY_DATE = "2025-12-05";
 const TOGETHER_SINCE = "June 2023";
-// const COUPLE_SONG =
-//   "https://www.youtube.com/embed/RgKAFK5djSk?autoplay=1&loop=1&playlist=RgKAFK5djSk&mute=0&volume=20";
 const COUPLE_SONG =
-  "https://www.youtube.com/embed/mvHNk1IBCv4?autoplay=1&loop=1&playlist=mvHNk1IBCv4&controls=0&modestbranding=1&rel=0&mute=0&start=0";
+  "https://www.youtube.com/embed/RgKAFK5djSk?autoplay=1&loop=1&playlist=RgKAFK5djSk&mute=0&volume=20";
+// const COUPLE_SONG =
+//   "https://www.youtube.com/embed/mvHNk1IBCv4?autoplay=1&loop=1&playlist=mvHNk1IBCv4&controls=0&modestbranding=1&rel=0&mute=0&start=0";
 // "../images/forever_Sweet.mp3";
 
+import QR from "../images/QR.jpg";
 import tiny from "../images/tiny.jpg";
 import babies from "../images/baby.png";
 import cap from "../images/cap.jpg";
@@ -30,10 +28,10 @@ import smile from "../images/smile.jpg";
 import FunFactsMagazine from "./FunFactsMagazine";
 import ThingsSheLikes from "./ThingsSheLikes";
 import LoveYou from "./LoveYou";
+import SpotifyQRScanner from "./SpotifyQRScanner";
 
 const PHOTOS = [tiny, babies, mum, cap, peace, swag, smile, us];
 
-// ←←← ALL THE THINGS YOU LOVE ABOUT HER (add as many as you want!)
 const THINGS_I_LOVE = [
   "I Love Your pretty eyes",
   "I Love Your lips",
@@ -58,7 +56,6 @@ const THINGS_I_LOVE = [
 
 const LOVE_LETTER = `
 I know a girl
-
 I’m convinced you came into existence a couple thousand years late.
 Where were you when goddess were being named?
 For I’d argue with the court until they carved you in stone
@@ -244,13 +241,13 @@ function App() {
               </>
             )}
           </div>
-          <p style={{ fontSize: "1.6rem", color: "white"}}>
-            Dayniel ♡, loving you since {TOGETHER_SINCE}
+          <p className="together-text">
+            Dayniel, loving you since {TOGETHER_SINCE}
           </p>
           <img src={Aibaby} alt="us" className="photo" />
         </section>
 
-        {/* <section className="bg5 page1">
+        <section className="bg5 page1">
           <MagazinePage />
         </section>
 
@@ -282,7 +279,7 @@ function App() {
           </div>
         </section>
 
-        <section className="bg3">
+        <section className="page3 bg3">
           <div className="envelope" onClick={() => setShowLetter(!showLetter)}>
             <div className={`letter ${showLetter ? "flipped" : ""}`}>
               <div className="side" style={{ color: "#d63384" }}>
@@ -292,8 +289,8 @@ function App() {
                 <pre
                   style={{
                     whiteSpace: "pre-wrap",
-                    fontSize: "1.3rem",
-                    lineHeight: "2",
+                    fontSize: "1.2rem",
+                    lineHeight: "1.7",
                     fontFamily: "'Dancing Script', cursive",
                     color: "#333",
                   }}
@@ -317,6 +314,13 @@ function App() {
           <LoveYou />
         </section>
 
+        <section className="bg5">
+          <SpotifyQRScanner
+            playlistUrl="https://open.spotify.com/playlist/1cQnd8vri8ufZ4pCHoYqgm?si=1DB_elEgQ3mttZlb9-WPjw%0A"
+            qrImageUrl={QR}
+          />
+        </section>
+
         <section className="bg4">
           <h2 style={{ fontSize: "4rem" }}>Made with every beat of my heart</h2>
           <p style={{ fontSize: "2rem", margin: "40px 0", color: "white" }}>
@@ -325,7 +329,7 @@ function App() {
           <p style={{ fontSize: "1.5rem", color: "white" }}>
             Scroll up to relive it anytime
           </p>
-        </section> */}
+        </section>
       </div>
     </>
   );

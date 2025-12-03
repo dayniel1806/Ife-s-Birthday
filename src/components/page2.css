@@ -11,6 +11,13 @@
   padding: 100px 20px 150px;
 }
 
+.page3{
+  min-height: 130vh;
+  padding: 100px 20px 150px;
+}
+
+
+
 @keyframes pulse {
   0%,
   100% {

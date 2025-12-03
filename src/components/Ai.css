@@ -208,7 +208,7 @@ h2 {
 }
 
 .envelope {
-  margin-top: -90vh;
+  margin-top: -120vh;
   perspective: 1000px;
   cursor: pointer;
 }
