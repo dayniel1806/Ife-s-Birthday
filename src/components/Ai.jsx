@@ -77,9 +77,7 @@ at least it shows my timeless soft spot for you.
 
 In one of my books I’d write my philosophy, the best philosophy.
 “As seconds are to time and watts to power, somewhere in another world,
- Covenant is the measurement of beauty.”
-
-I heard you read books so I turned a writer cause of you.
+ Covenant is the measurement of beauty.
 `;
 
 const LOVE_LETTERs = `Happy Birthday, my ${HER_NAME} ♡
@@ -246,7 +244,7 @@ function App() {
           </p>
           <img src={Aibaby} alt="us" className="photo" />
         </section>
-
+{/* 
         <section className="bg5 page1">
           <MagazinePage />
         </section>
@@ -329,7 +327,7 @@ function App() {
           <p style={{ fontSize: "1.5rem", color: "white" }}>
             Scroll up to relive it anytime
           </p>
-        </section>
+        </section> */}
       </div>
     </>
   );
