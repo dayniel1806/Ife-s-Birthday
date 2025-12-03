@@ -13,7 +13,7 @@ const BIRTHDAY_DATE = "2025-12-05"; // ← YYYY-MM-DD
 const TOGETHER_SINCE = "June 2023";
 const COUPLE_SONG =
   "https://www.youtube.com/embed/RgKAFK5djSk?autoplay=1&loop=1&playlist=RgKAFK5djSk&mute=0&volume=20";
-  // "../images/forever_Sweet.mp3";
+// "../images/forever_Sweet.mp3";
 
 import tiny from "../images/tiny.jpg";
 import babies from "../images/baby.png";
@@ -24,8 +24,6 @@ import us from "../images/us.png";
 import mum from "../images/mumz.jpg";
 import black from "../images/black.jpeg";
 import smile from "../images/smile.jpg";
-
-
 
 import FunFactsMagazine from "./FunFactsMagazine";
 import ThingsSheLikes from "./ThingsSheLikes";
@@ -85,7 +83,6 @@ In one of my books I’d write my philosophy, the best philosophy.
 I heard you read books so I turned a writer cause of you.
 `;
 
-
 const LOVE_LETTERs = `Happy Birthday, my ${HER_NAME} ♡
 
 Today the whole world should stop and celebrate you — because you make my whole world better every single day.
@@ -101,10 +98,55 @@ function App() {
   const [musicOn, setMusicOn] = useState(true);
   const [photoIndex, setPhotoIndex] = useState(0);
 
-  const daysLeft = Math.max(
-    0,
-    Math.ceil((new Date(BIRTHDAY_DATE) - new Date()) / (1000 * 60 * 60 * 24))
-  );
+  const [loaded, setLoaded] = useState(false);
+  const [years, setYears] = useState(0);
+  const [days, setDays] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
+  const [daysLeft, setDaysLeft] = useState(0); // keep for other logic
+
+  // Live countdown effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const nowInNigeria = new Date(
+        new Date().toLocaleString("en-US", { timeZone: "Africa/Lagos" })
+      );
+
+      // FIXED target with Nigeria timezone
+      let target = new Date(
+        new Date("2025-12-05T00:00:00").toLocaleString("en-US", {
+          timeZone: "Africa/Lagos",
+        })
+      );
+
+      if (target < nowInNigeria) {
+        target.setFullYear(target.getFullYear() + 1);
+      }
+
+      const difference = target - nowInNigeria;
+
+      const totalDays = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const h = Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((difference % (1000 * 60)) / 1000);
+
+      const y = totalDays >= 365 ? Math.floor(totalDays / 365) : 0;
+      const d = totalDays >= 365 ? totalDays % 365 : totalDays;
+
+      setYears(y);
+      setDays(d);
+      setHours(h);
+      setMinutes(m);
+      setSeconds(s);
+      setDaysLeft(totalDays);
+      setLoaded(true);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   // Auto change photo
   useEffect(() => {
@@ -153,23 +195,63 @@ function App() {
         <section className="bg1 page1">
           <h1>Happy Birthday</h1>
           <h2>{HER_NAME} ♡</h2>
-          <p className="days">
-            {daysLeft === 0
-              ? "TODAY IS YOUR DAY!!!"
-              : `${daysLeft} day${daysLeft > 1 ? "s" : ""} to go ♡`}
-          </p>
-          <p style={{ fontSize: "1.6rem", color: "white", marginTop: "20px" }}>
-            From {YOUR_NAME}, loving you since {TOGETHER_SINCE}
+          <div className="countdown-timer">
+            {loaded && daysLeft <= 0 ? (
+              <h2 className="birthday-today">
+                TODAY IS YOUR DAY MY LOVE!!! HAPPY BIRTHDAY BABY!!!
+              </h2>
+            ) : (
+              <>
+                {/* Only show Years if actually 1+ year left */}
+                {years > 0 && (
+                  <div className="timer-box">
+                    <span className="time-number">
+                      {String(years).padStart(2, "0")}
+                    </span>
+                    <span className="time-label">Years</span>
+                  </div>
+                )}
+
+                <div className="timer-box">
+                  <span className="time-number">
+                    {String(days).padStart(2, "0")}
+                  </span>
+                  <span className="time-label">Days</span>
+                </div>
+
+                <div className="timer-box">
+                  <span className="time-number">
+                    {String(hours).padStart(2, "0")}
+                  </span>
+                  <span className="time-label">Hours</span>
+                </div>
+
+                <div className="timer-box">
+                  <span className="time-number">
+                    {String(minutes).padStart(2, "0")}
+                  </span>
+                  <span className="time-label">Minutes</span>
+                </div>
+
+                <div className="timer-box">
+                  <span className="time-number">
+                    {String(seconds).padStart(2, "0")}
+                  </span>
+                  <span className="time-label">Seconds</span>
+                </div>
+              </>
+            )}
+          </div>
+          <p style={{ fontSize: "1.6rem", color: "white"}}>
+            Dayniel ♡, loving you since {TOGETHER_SINCE}
           </p>
           <img src={Aibaby} alt="us" className="photo" />
         </section>
 
-        {/* Page 5 - Magazine */}
-        <section className="bg5 page1">
+        {/* <section className="bg5 page1">
           <MagazinePage />
         </section>
 
-        {/* Page 2 - LONG collage + list page */}
         <section className="page2">
           <div className="collage-area">
             <img src={PHOTOS[0]} className="pphoto photo1" alt="memory" />
@@ -198,7 +280,6 @@ function App() {
           </div>
         </section>
 
-        {/* Page 3 - Letter */}
         <section className="bg3">
           <div className="envelope" onClick={() => setShowLetter(!showLetter)}>
             <div className={`letter ${showLetter ? "flipped" : ""}`}>
@@ -222,22 +303,18 @@ function App() {
           </div>
         </section>
 
-        {/* Page  */}
         <section className="bg3">
           <ThingsSheLikes />
         </section>
 
-        {/* Page  */}
         <section className="bg3">
           <FunFactsMagazine />
         </section>
 
-                {/* Page  */}
         <section className="pagePic">
           <LoveYou />
         </section>
 
-        {/* Page 4 - Final */}
         <section className="bg4">
           <h2 style={{ fontSize: "4rem" }}>Made with every beat of my heart</h2>
           <p style={{ fontSize: "2rem", margin: "40px 0", color: "white" }}>
@@ -246,7 +323,7 @@ function App() {
           <p style={{ fontSize: "1.5rem", color: "white" }}>
             Scroll up to relive it anytime
           </p>
-        </section>
+        </section> */}
       </div>
     </>
   );

@@ -6,7 +6,7 @@ export default function ThingsSheLikes() {
     "She loves Food",
     "She likes Sleeeeeeep😭",
     "She loves me",
-    "She loves caprisone and Cheese balls",
+    "She loves Lovers (Anna of the North)",
     "She loves me... again😌",
     "She loves Korean Series",
     "She loves rice and beans",
