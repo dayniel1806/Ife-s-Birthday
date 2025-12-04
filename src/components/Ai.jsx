@@ -30,6 +30,7 @@ import FunFactsMagazine from "./FunFactsMagazine";
 import ThingsSheLikes from "./ThingsSheLikes";
 import LoveYou from "./LoveYou";
 import SpotifyQRScanner from "./SpotifyQRScanner";
+import SecretFeedback from "./SecretFeedback";
 
 const PHOTOS = [tiny, babies, mum, cap, peace, swag, smile, us];
 
@@ -48,12 +49,12 @@ const THINGS_I_LOVE = [
   "I Love how you call me your baby",
   "I Love how you moan my name",
   "I Love Your voice notes",
-  "I Love Your hugs",
+  "I Love Your deep hugs",
   "I love that we have so much in common and yet still so different",
-  "I Love Your dances",
-  "The fact that you love me",
+  "I Love Your kisses",
+  "I Love The fact that you love me",
   "Because you're you — and that's my favorite thing in the world",
-  "It is impossible for me to add the entire list right here - but one day with your head on my chest, I will list them all, my love. ",
+  "It is impossible for me to add the entire list right here - but one day with your head on my chest... I will list them all, my love. ",
 ];
 
 const LOVE_LETTER = `
@@ -78,7 +79,7 @@ first it was my heart that fell, now my hair—
 at least it shows my timeless soft spot for you.
 
 In one of my books I’d write my philosophy, the best philosophy.
-“As seconds are to time and watts to power, somewhere in another world,
+“As seconds are to time and watts to power, Forever in Daniel's world,
  Covenant is the measurement of beauty.
 `;
 
@@ -247,7 +248,7 @@ function App() {
           <img src={Aibaby} alt="us" className="photo" />
         </section>
 
-        {/* <section className="bg5 page1">
+        <section className="bg5 page1">
           <MagazinePage />
         </section>
 
@@ -283,7 +284,7 @@ function App() {
           <div className="envelope" onClick={() => setShowLetter(!showLetter)}>
             <div className={`letter ${showLetter ? "flipped" : ""}`}>
               <div className="side" style={{ color: "#d63384" }}>
-                <h2>Click to open your letter</h2>
+                <h2>Click to open your poem</h2>
               </div>
               <div className="side back">
                 <pre
@@ -321,6 +322,9 @@ function App() {
           />
         </section>
 
+        <section className="bg6">
+          <SecretFeedback />
+        </section>
         <section className="bg4">
           <h2 style={{ fontSize: "4rem" }}>Made with every beat of my heart</h2>
           <p style={{ fontSize: "2rem", margin: "40px 0", color: "white" }}>
@@ -329,7 +333,7 @@ function App() {
           <p style={{ fontSize: "1.5rem", color: "white" }}>
             Scroll up to relive it anytime
           </p>
-        </section> */}
+        </section>
       </div>
     </>
   );

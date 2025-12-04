@@ -46,6 +46,9 @@ section {
 .bg5{
     background: linear-gradient(35deg, #6db2ff, #ff9a9e);
 }
+.bg6{
+  background: linear-gradient(135deg, #b783b4, #4b224c);
+}
 
 h1 {
   font-size: 4.8rem;
