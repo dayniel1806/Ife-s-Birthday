@@ -10,7 +10,17 @@ export default function MagazinePage() {
       <div className="editor-note">
         <h2>CREATOR'S NOTE</h2>
         <p>
-          I wish i was right there with you to celebrate today with you. I would say today is the day you finally turn a woman but you will always be Daniel's sweet little baby girl. I am genuinely so very proud of the woman you have become and you are becoming. And even though i cannot be there physically, i hope you feel my presence in every single word, every page and every detail of this gift to you❤️.
+          You are officially an adult - but to me, you'll always be my baby.
+           <br />
+           I wish I could be there to hold you, laugh with you, <br />
+           and celebrate you the way you really do deserve.
+           <br /> But until we're in the same place again, know that I'm thinking of you, missing you, and loving you deeper ever day. 
+           <br />
+           This is to a new chapter of your life, 
+           <br />
+           I can't wait to see and be part of the amazing things you'll do. 
+           <br />
+           No matter the distance, I'm always with you in heart.
         </p>
       </div>
 
@@ -28,11 +38,8 @@ export default function MagazinePage() {
         </div>
         <div className="message-box">
         <p>
-          <h3>Who is my baby?</h3>
-          She is the most caring, smart, beautiful, kind, sexy and amazing human. 
-
-          I dont evven know what to say. We've had so many monents together; good, bad, the best and some unpleasant ones. We've laughed and smiled and made love. Every single moment I've had with you- I cherish them in my heart forever❤️. Happy birthday my baby girl. 
-          I love you more than words could ever express. I hope this website makes you feel as special as you truly are because 
+           I wish i was right there with you to celebrate today with you. I would say today is the day you finally turn a woman🤭 I would kiss you, i would take care of you and I would say how lucky i am to have you. <br /> I am genuinely so very proud of the woman you have become and you are becoming. And even though i cannot be there physically, i hope you feel my presence and you're able to enjoy every single word, every page and every detail of this gift to you❤️.
+           <br />
         </p>
 
       </div>

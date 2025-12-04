@@ -8,8 +8,9 @@ const HER_NAME = "Baby"; // ← her name/nickname
 const YOUR_NAME = "Your Ife";
 const BIRTHDAY_DATE = "2025-12-05";
 const TOGETHER_SINCE = "June 2023";
-const COUPLE_SONG =
-  "https://www.youtube.com/embed/RgKAFK5djSk?autoplay=1&loop=1&playlist=RgKAFK5djSk&mute=0&volume=20";
+// const COUPLE_SONG =
+  // "https://www.youtube.com/embed/RgKAFK5djSk?autoplay=1&loop=1&playlist=RgKAFK5djSk&mute=0&volume=20";
+  const COUPLE_SONG = "https://www.youtube.com/embed/u2ah9tWTkmk?autoplay=1&mute=0&loop=1&playlist=u2ah9tWTkmk&volume=25&controls=0&modestbranding=1";
 // const COUPLE_SONG =
 //   "https://www.youtube.com/embed/mvHNk1IBCv4?autoplay=1&loop=1&playlist=mvHNk1IBCv4&controls=0&modestbranding=1&rel=0&mute=0&start=0";
 // "../images/forever_Sweet.mp3";
@@ -38,6 +39,7 @@ const THINGS_I_LOVE = [
   "I Love Your voice",
   "I Love that you look so beautiful without even putting in effort ",
   "I Love Your smile",
+  "I Love Your tummy (flat or blump)",
   "I Love that you manage to put a strong face on no matter what you're going through",
   "I Love that you can tell me when you're not doing too well",
   "I love your cute lil t*ts",
@@ -112,7 +114,7 @@ function App() {
 
       // FIXED target with Nigeria timezone
       let target = new Date(
-        new Date("2025-12-06T00:00:00").toLocaleString("en-US", {
+        new Date("2025-12-05T24:00:00").toLocaleString("en-US", {
           timeZone: "Africa/Lagos",
         })
       );
@@ -244,8 +246,8 @@ function App() {
           </p>
           <img src={Aibaby} alt="us" className="photo" />
         </section>
-{/* 
-        <section className="bg5 page1">
+
+        {/* <section className="bg5 page1">
           <MagazinePage />
         </section>
 
