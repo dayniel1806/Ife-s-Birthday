@@ -5,7 +5,7 @@ import Ai from "./components/Ai";
 function App(){
   return(
     <>
-    <Ai />
+    {/* <Ai /> */}
     </>
   )
 }

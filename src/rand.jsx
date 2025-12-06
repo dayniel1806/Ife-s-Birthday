@@ -195,11 +195,53 @@ function App() {
         <section className="bg1 page1">
           <h1>Happy Birthday</h1>
           <h2>{HER_NAME} ♡</h2>
-          
+          <div className="countdown-timer">
+            {loaded && daysLeft <= 0 ? (
               <h2 className="birthday-today">
                 TODAY IS YOUR DAY MY LOVE!!! HAPPY BIRTHDAY BABY!!!
               </h2>
-            
+            ) : (
+              <>
+                {/* Only show Years if actually 1+ year left */}
+                {years > 0 && (
+                  <div className="timer-box">
+                    <span className="time-number">
+                      {String(years).padStart(2, "0")}
+                    </span>
+                    <span className="time-label">Years</span>
+                  </div>
+                )}
+
+                <div className="timer-box">
+                  <span className="time-number">
+                    {String(days).padStart(2, "0")}
+                  </span>
+                  <span className="time-label">Days</span>
+                </div>
+
+                <div className="timer-box">
+                  <span className="time-number">
+                    {String(hours).padStart(2, "0")}
+                  </span>
+                  <span className="time-label">Hours</span>
+                </div>
+
+                <div className="timer-box">
+                  <span className="time-number">
+                    {String(minutes).padStart(2, "0")}
+                  </span>
+                  <span className="time-label">Minutes</span>
+                </div>
+
+                <div className="timer-box">
+                  <span className="time-number">
+                    {String(seconds).padStart(2, "0")}
+                  </span>
+                  <span className="time-label">Seconds</span>
+                </div>
+              </>
+            )}
+          </div>
           <p className="together-text">
             Dayniel, loving you since {TOGETHER_SINCE}
           </p>
