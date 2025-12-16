@@ -6,8 +6,8 @@ import NotFound from "./NotFound";
 function App(){
   return(
     <>
-    {/* <NotFound /> */}
-    <Ai />
+    <NotFound />
+    {/* <Ai /> */}
     </>
   )
 }
