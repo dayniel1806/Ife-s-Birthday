@@ -5,7 +5,7 @@ function SecretFeedback() {
   const [input, setInput] = useState("");
 
   // ←←← CHANGE THIS TO SOMETHING ONLY SHE KNOWS
-  const secretCode = "ordinary";        // or "hoodiethief", "myforever", "dec5", etc.
+  const secretCode = "18062023";        // or "hoodiethief", "myforever", "dec5", etc.
 
   const check = () => {
     if (input.toLowerCase().trim() === secretCode) {
@@ -24,7 +24,7 @@ function SecretFeedback() {
           Secret Page Just For You
         </h1>
         <p style={{fontSize:"1.8rem", color:"#fff", marginBottom:"40px"}}>
-          Type our magic word…
+          Our Anniversary(ddmmyy)
         </p>
         <input
           type="text"
@@ -53,7 +53,7 @@ function SecretFeedback() {
       padding:"40px 20px", textAlign:"center", scrollSnapAlign:"start"
     }}>
       <h1 style={{fontFamily:"'Dancing Script',cursive", fontSize:"5rem", color:"#4b224c"}}>
-        You Found My Secret!
+        Heyyyy Babbbyy🫠🫠
       </h1>
       <p style={{fontSize:"1.8rem", color:"#555", margin:"30px 0"}}>
         Tell me everything, baby ♡ (only I will see this)
